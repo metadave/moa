@@ -6,7 +6,7 @@ Maintainer: Dave Parfitt <metadave@protonmail.com>
 See README for more info
 -}
 
-module Moa
+module Moa.Moa
        ( someFunc
        ) where
 

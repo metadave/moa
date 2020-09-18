@@ -1,7 +1,10 @@
 module Main (main) where
 
-import Moa (someFunc)
-
+import Moa.Moa (someFunc)
+import Moa.CLI
 
 main :: IO ()
-main = someFunc
+main = do
+         let x = sample
+         putStrLn "MOA v0.1.0"
+         someFunc

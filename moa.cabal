@@ -14,7 +14,12 @@ extra-doc-files:     README.md
 tested-with:         GHC == 8.10.1
 
 common common-options
-  build-depends:       base  >=4.13.0.0 && <4.15
+  build-depends:       base  >=4.13.0.0 && <4.15,
+                       optparse-applicative,
+                       lens,
+                       megaparsec,
+                       QuickCheck
+                       
   
   ghc-options:         -Wall
                        -Wcompat
@@ -38,7 +43,9 @@ common common-options
 library
   import:              common-options
   hs-source-dirs:      src
-  exposed-modules:     Moa
+  exposed-modules:     Moa.Moa,
+                       Moa.CLI
+                       
 
 executable moa
   import:              common-options
